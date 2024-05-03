@@ -21,12 +21,15 @@ public class UserVerification {
         Collections.sort(list,comparator);
         int mobileNumberChecker=Collections.binarySearch(list, new UserDetails(name, emailId, age, datrOfBirth, gender, mobileNumber,password),comparator);
 
-        if (emailChecker !=0 && mobileNumberChecker!=0) {
+        if (emailChecker <0 && mobileNumberChecker<0) {
             list.add(new UserDetails(name, emailId, age, datrOfBirth, gender, mobileNumber,password));
-
-        }{
+            System.out.println("signup Successfull");
+        }
+        else
+        {
             System.out.println("Emailid or MobileNumber Already Exists");
         }
+
 
     }
 
