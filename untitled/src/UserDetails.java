@@ -6,18 +6,22 @@ public class UserDetails implements Comparable<UserDetails>{
     private String dateOfBirth;
     private String gender;
 
+    private String password;
+
     private long mobileNumber;
 
     public UserDetails(){
-        this("Na","Na",0,"Na","Na",0);
+        this("Na","Na",0,"Na","Na",0,"Na");
     }
-    public UserDetails(String name, String emailId, int age, String datrOfBirth, String gender, long mobileNumber){
+    public UserDetails(String name, String emailId, int age, String datrOfBirth, String gender, long mobileNumber,String password){
         userId=userId+1;
         this.name=name;
         this.age=age;
         this.gender=gender;
         this.emailId=emailId;
         this.dateOfBirth=datrOfBirth;
+        this.mobileNumber=mobileNumber;
+        this.password=password;
 
     }
 
@@ -77,14 +81,23 @@ public class UserDetails implements Comparable<UserDetails>{
         this.mobileNumber = mobileNumber;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
-        return "SignUp{" +
+        return "UserDetails{" +
                 "name='" + name + '\'' +
                 ", emailId='" + emailId + '\'' +
                 ", age=" + age +
                 ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", gender='" + gender + '\'' +
+                ", password='" + password + '\'' +
                 ", mobileNumber=" + mobileNumber +
                 '}';
     }
