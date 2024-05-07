@@ -40,7 +40,7 @@ public class UserVerification {
         Collections.sort(list);
     int index=    Collections.binarySearch(list,new UserDetails("",email,0,"","",00,""));
         if(index>=0 && list.get(index).getPassword().equals(password)){
-            System.out.println("Login Successfull");
+            System.out.println("LoginAndRegistration.Login Successfull");
         }
         else{
             System.out.println("invalid password or emailid");
@@ -58,7 +58,7 @@ public class UserVerification {
         Collections.sort(list,comparator);
         int index=    Collections.binarySearch(list,new UserDetails("","",0,"","",mobileNumber,""),comparator);
         if(index>=0 && list.get(index).getPassword().equals(password)){
-            System.out.println("Login Successfull");
+            System.out.println("LoginAndRegistration.Login Successfull");
         }
         else{
             System.out.println("invalid password or emailid");
