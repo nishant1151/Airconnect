@@ -1,3 +1,5 @@
+import Model.UserDetails;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -9,10 +11,10 @@ public class UserVerification {
 
     public  void signUp(String name, String emailId, int age, String datrOfBirth, String gender, long mobileNumber,String password) {
         Collections.sort(list);
-        Comparator<UserDetails> comparator=(o1,o2)->{
-            if(o1.getMobileNumber()==o2.getMobileNumber()){
+        Comparator<UserDetails> comparator = (o1, o2) -> {
+            if (o1.getMobileNumber() == o2.getMobileNumber()) {
                 return 0;
-            } else if (o1.getMobileNumber()>o2.getMobileNumber()) {
+            } else if (o1.getMobileNumber() > o2.getMobileNumber()) {
                 return 1;
             }
             return -1;
@@ -45,7 +47,7 @@ public class UserVerification {
         }
     }
     public void loginUser(long mobileNumber,String password){
-        Comparator<UserDetails> comparator=(o1,o2)->{
+        Comparator<UserDetails> comparator=(o1, o2)->{
             if(o1.getMobileNumber()==o2.getMobileNumber()){
                 return 0;
             } else if (o1.getMobileNumber()>o2.getMobileNumber()) {

@@ -1,3 +1,5 @@
+package Model;
+
 public class UserDetails implements Comparable<UserDetails>{
     private static int userId;
     private String name;
@@ -91,7 +93,7 @@ public class UserDetails implements Comparable<UserDetails>{
 
     @Override
     public String toString() {
-        return "UserDetails{" +
+        return "Model.UserDetails{" +
                 "name='" + name + '\'' +
                 ", emailId='" + emailId + '\'' +
                 ", age=" + age +
