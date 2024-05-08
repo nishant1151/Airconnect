@@ -16,6 +16,7 @@ public class FetchData {
             while(resultSet.next())  {
               set.add(resultSet.getLong(5));
             }
+            System.out.println(set);
             return set;
 
         }
