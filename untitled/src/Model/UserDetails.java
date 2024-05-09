@@ -1,5 +1,9 @@
 package Model;
 
+import DatabaseConnection.FetchData;
+
+import java.sql.SQLException;
+
 public class UserDetails implements Comparable<UserDetails>{
     private static int userId;
     private String name;
@@ -12,11 +16,11 @@ public class UserDetails implements Comparable<UserDetails>{
 
     private long mobileNumber;
 
-    public UserDetails(){
+    public UserDetails() throws SQLException {
         this("Na","Na",0,"Na","Na",0,"Na");
     }
-    public UserDetails(String name, String emailId, int age, String datrOfBirth, String gender, long mobileNumber,String password){
-        userId=userId+1;
+    public UserDetails(String name, String emailId, int age, String datrOfBirth, String gender, long mobileNumber,String password) throws SQLException {
+        userId= FetchData.fetchUSerId()+1;
         this.name=name;
         this.age=age;
         this.gender=gender;
